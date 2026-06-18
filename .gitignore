@@ -1,0 +1,15 @@
+rgz
+*.out
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+build/
+cmake-build-*/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
