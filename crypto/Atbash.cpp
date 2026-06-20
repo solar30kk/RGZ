@@ -61,7 +61,28 @@ extern "C" {
     }
 
     EXPORT void decryptText(const char* inputText, char* outputText) {
-        encryptText(inputText, outputText);
+        if (!inputText || !outputText) return;
+
+        size_t len = std::strlen(inputText);
+        size_t outIdx = 0;
+
+    
+        for (size_t i = 0; i + 1 < len; i += 2) {
+            char hexByte[3] = { inputText[i], inputText[i+1], '\0' };
+        
+        
+            unsigned int byteVal = 0;
+            std::stringstream ss;
+            ss << std::hex << hexByte;
+            ss >> byteVal;
+
+        
+            unsigned char transformed = static_cast<unsigned char>(255 - byteVal);
+        
+        
+            outputText[outIdx++] = static_cast<char>(transformed);
+        }
+        outputText[outIdx] = '\0';
     }
 
 }
