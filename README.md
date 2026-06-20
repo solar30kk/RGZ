@@ -1,1 +1,1 @@
-реализовн шифр Тритемиус
+Encryption Algorithm RGR
