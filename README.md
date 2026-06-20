@@ -1,1 +1,1 @@
-Реализован шифр Атбаш
+Encryption Algorithm RGR
