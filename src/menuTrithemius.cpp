@@ -41,7 +41,7 @@ void menuTrithemius(){
             std::cout << "Введите имя для зашифрованного файла: ";
             std::cin >> outFile;
             std::cout << "Введите начальный ключ для шифрования (число): ";
-            std::cin >> key;
+            
             
             if (!(std::cin >> key)) {
                 std::cout << std::endl << "Ошибка! Введите числовое значение" << std::endl;
@@ -89,7 +89,7 @@ void menuTrithemius(){
             std::cout << "Введите имя для расшифрованного файла: ";
             std::cin >> outFile;
             std::cout << "Введите начальный ключ для расшифрования (число): ";
-            std::cin >> key;
+            
 
             if (!(std::cin >> key)) {
                 std::cout << std::endl << "Ошибка! Введите числовое значение" << std::endl;
@@ -137,8 +137,7 @@ void menuTrithemius(){
             std::cin.ignore();
             std::getline(std::cin, inputText);
             std::cout << "Введите начальный ключ шифрования (число): ";
-            std::cin >> key;
-
+            
             if (!(std::cin >> key)) {
                 std::cout << std::endl << "Ошибка! Введите числовое значение" << std::endl;
                 std::cin.clear(); 
@@ -188,7 +187,7 @@ void menuTrithemius(){
             std::cin.ignore();
             std::getline(std::cin, inputText);
             std::cout << "Введите начальный ключ для расшифрования (число): ";
-            std::cin >> key;
+           
 
             if (!(std::cin >> key)) {
                 std::cout << std::endl << "Ошибка! Введите числовое значение" << std::endl;
