@@ -48,7 +48,7 @@ extern "C" {
         char ch;
         while (inFile.get(ch)) {
             unsigned char byte = static_cast<unsigned char>(ch);
-            unsigned char decrypted = static_cast<unsigned char>((byte - key + 256) % 256);
+            unsigned char decrypted = static_cast<unsigned char>((byte + 256 - (key % 256)) % 256);
             outFile.put(static_cast<char>(decrypted));
         }
 
@@ -87,7 +87,7 @@ extern "C" {
         for (size_t i = 0; i < len; i += 2) {
             std::string byteString(inputText + i, 2);
             unsigned char byte = static_cast<unsigned char>(strtol(byteString.c_str(), NULL, 16));
-            unsigned char decrypted = static_cast<unsigned char>((byte - key + 256) % 256);
+            unsigned char decrypted = static_cast<unsigned char>((byte + 256 - (key % 256)) % 256);
             outStr += static_cast<char>(decrypted);
         }
 
@@ -98,3 +98,4 @@ extern "C" {
     }
 
 }
+
