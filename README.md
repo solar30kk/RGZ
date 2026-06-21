@@ -1,1 +1,1 @@
-Реализован шифр Цезаря
+Encryption Algorithm RGR
