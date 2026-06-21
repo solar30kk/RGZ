@@ -13,7 +13,7 @@
 
 
 
-bool login(std::string& password){ // желательно бы куда-нибудь переместить, а то смешно выглядит 
+bool login(std::string& password){ 
 
     if ( password == "admin"){
         std::cout << "Авторизация успешна!" << std::endl;
